@@ -18,8 +18,8 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/albus/full_albus.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common ToxycOS stuff.
+$(call inherit-product, vendor/toxyc/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -27,12 +27,10 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := albus
-PRODUCT_NAME := lineage_albus
+PRODUCT_NAME := toxyc_albus
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
-
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+TOXYC_BUILD_TYPE=OFFICIAL
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
